@@ -41,7 +41,9 @@ export const ProductInformations = ({ product }: ProductInformationsProps) => {
           </a>
         </div>
         <div className={css({ mt: "6" })}>
-          <p className={css({ fontSize: "base", lineHeight: "base", color: "zinc.900" })}>{product.description}</p>
+          <p className={css({ fontSize: "base", lineHeight: "base", color: "zinc.900", whiteSpace: "pre-wrap" })}>
+            {product.description}
+          </p>
         </div>
       </div>
     </div>

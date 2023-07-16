@@ -48,11 +48,35 @@ export const products: IProduct[] = [
   },
   {
     id: 3,
-    title: "Chale 3",
+    title: "Chale en coton bio",
     price: 720.65,
-    description:
-      "Aenean sit amet justo. Morbi ut odio. Cras mi pede, malesuada in, imperdiet et, commodo vulputate, justo. In blandit ultrices enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.",
+    description: `
+    Découvrez notre magnifique châle en coton, un véritable incontournable pour toutes les fashionistas éthiques ! Fabriqué à partir de coton bio de la plus haute qualité, ce châle vous offre le mélange parfait de confort, de style et de durabilité.   
+    
+    Son tissu doux et léger en fait l'accessoire idéal pour toutes les saisons. Que ce soit pour vous protéger des frissons de l'hiver ou pour ajouter une touche d'élégance légère pendant les douces soirées d'été, ce châle est polyvalent et s'adapte à toutes les occasions. 
+    
+    Son design classique et intemporel est rehaussé par des motifs subtils qui lui confèrent une touche d'originalité. Avec ses dimensions généreuses, il peut être porté de multiples façons : enroulé autour du cou, drapé sur les épaules ou même utilisé comme une écharpe élégante. 
+    
+    Mais ce n'est pas tout ! Ce châle est également respectueux de l'environnement. En choisissant le coton bio, vous contribuez à préserver la planète en soutenant une mode plus durable et en réduisant votre empreinte écologique. Alors, laissez-vous envelopper de douceur et de style avec notre châle en coton bio. Vous ne pourrez plus vous en passer !`,
     images: "../../chale.png",
+    reviews: [
+      {
+        id: 4,
+        rate: 5,
+        title: "Super châle",
+        text: "J'ai acheté ce châle en coton bio et je suis plus heureux que jamais d'avoir une épaule aussi écolo ! Non seulement il est doux et confortable, mais il donne aussi l'impression que je me suis échappé dans un champ de coton bio chaque fois que je le porte. Mon seul problème maintenant, c'est que je suis devenu la coqueluche des abeilles qui pensent que je suis leur nouvelle fleur préférée ! C'est peut-être le prix à payer pour être à la mode et respectueux de l'environnement, mais ça vaut totalement le coup ! Achetez ce châle et préparez-vous à être entouré de compliments et d'insectes adorables !",
+        name: "Pierre Cottonbio",
+        date: new Date("2022-09-01"),
+      },
+      {
+        id: 5,
+        rate: 3,
+        title: "Pas mal",
+        text: "Bon... comment dire... j'ai acheté ce châle en coton bio dans l'espoir de me sentir comme une déesse écologique. Mais bon sang, je me sens plus proche d'un mouton égaré dans une ferme bio. C'est doux, c'est vrai, mais ça ressemble plus à une couverture de grand-mère qu'à un accessoire tendance. J'ai essayé de le porter de différentes façons, mais je finis toujours par ressembler à une version ratée de Carrie Bradshaw",
+        name: "Mel Ina",
+        date: new Date("2020-10-01"),
+      },
+    ],
   },
   {
     id: 4,
