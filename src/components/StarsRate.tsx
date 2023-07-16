@@ -7,7 +7,7 @@ interface StarsRateProps {
 export const StarsRate = ({ rate }: StarsRateProps) => {
   return (
     <div className={css({ display: "flex" })}>
-      {new Array(5).fill(4).map((star, index) => {
+      {new Array(5).fill(4).map((_, index) => {
         return (
           <svg
             key={index}

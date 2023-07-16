@@ -42,7 +42,7 @@ export const ProductReview = ({ product }: ProductReviewProps) => {
           rowGap: "12px",
         })}
       >
-        {product.reviews?.map((review, index) => (
+        {product.reviews?.map((review) => (
           <blockquote key={review.id}>
             <header className={css({ sm: { display: "flex", alignItems: "center", gap: "4" } })}>
               <StarsRate rate={review.rate} />
