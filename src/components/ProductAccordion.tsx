@@ -3,16 +3,16 @@ import { css } from "../../styled-system/css";
 export const ProductAccordion = () => {
   const accordions = [
     {
-      title: "Shipping",
+      title: "Livraison",
       icon: "truck",
       content:
-        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam possimus fuga dolor rerum dicta, ipsum laboriosam est totam iusto alias incidunt cum tempore aliquid aliquam error quisquam ipsam asperiores! Iste?",
+        "La livraison est offerte à partir de 50€ d'achat. Les commandes sont expédiées sous 48h. Les retours sont gratuits.",
     },
     {
-      title: "Care instructions",
+      title: "Instructions de lavage",
       icon: "care",
       content:
-        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam possimus fuga dolor rerum dicta, ipsum laboriosam est totam iusto alias incidunt cum tempore aliquid aliquam error quisquam ipsam asperiores! Iste?",
+        "Lavage en machine à 30°. Ne pas mettre au sèche-linge. Ne pas repasser. Ne pas nettoyer à sec. Ne pas utiliser d'eau de javel.",
     },
   ];
   return (

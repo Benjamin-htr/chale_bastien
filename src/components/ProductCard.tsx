@@ -53,7 +53,7 @@ export const ProductCard = ({ product }: ProductCardProps) => {
                 ></path>
               </svg>
             </span>
-            <span>Shop now</span>
+            <span>Acheter maintenant</span>
           </Button>
         </div>
       </div>

@@ -14,6 +14,7 @@ export const Product = () => {
   if (!productId) throw new Error("No product id provided");
 
   const product = products.at(parseInt(productId) - 1);
+  console.log(product);
 
   if (product === undefined) {
     return <div>Product not found</div>;
@@ -43,7 +44,7 @@ export const Product = () => {
             <ProductInformations product={product} />
 
             <div>
-              <Button>Add to cart</Button>
+              <Button>Ajouter au panier</Button>
             </div>
 
             <div className={css({ mt: "8" })}>
@@ -54,7 +55,7 @@ export const Product = () => {
       </section>
 
       <section className={css({ paddingX: "1.5rem" })}>
-        <ProductReview />
+        <ProductReview product={product} />
       </section>
 
       <section className={css({ w: "container", maxW: "container" })}>

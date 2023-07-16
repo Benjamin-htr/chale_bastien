@@ -1,7 +1,7 @@
 import { IProduct } from "../utils/IProduct";
 
 // Type: Data
-const data: IProduct[] = [
+export const products: IProduct[] = [
   {
     id: 1,
     title: "Châle en laine",
@@ -93,13 +93,3 @@ const data: IProduct[] = [
     images: "../../chale.png",
   },
 ];
-
-export const products: IProduct[] = data.map((product) => {
-  return {
-    id: product.id,
-    title: product.title,
-    price: product.price,
-    description: product.description,
-    images: product.images,
-  };
-});
