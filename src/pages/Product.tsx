@@ -13,7 +13,7 @@ export const Product = () => {
 
   if (!productId) throw new Error("No product id provided");
 
-  const product = products.at(parseInt(productId));
+  const product = products.at(parseInt(productId) - 1);
 
   if (product === undefined) {
     return <div>Product not found</div>;
