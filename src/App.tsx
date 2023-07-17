@@ -4,6 +4,7 @@ import { Footer } from "./components/Footer";
 import { Header } from "./components/Header";
 import { Product } from "./pages/Product";
 import { Products } from "./pages/Products";
+import { Team } from "./pages/Team";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <main>
         <Routes>
           <Route path="/" element={<Products />} />
+          <Route path="/team" element={<Team />} />
           <Route path="products/:productId" element={<Product />} />
         </Routes>
       </main>

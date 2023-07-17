@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { css } from "../../styled-system/css";
 import { grid } from "../../styled-system/patterns";
 import { CartIcon } from "./CartIcon";
@@ -22,37 +23,29 @@ export const Header = () => {
             paddingX: "1.5rem",
           })}
         >
-          <a href="/">
-            <span
+          <div>
+            <Link
+              to="/team"
+              className={css({ color: "black !important", fontSize: "3xl", _hover: { textDecoration: "violet" } })}
+            >
+              🤝
+            </Link>
+          </div>
+          <Link to="/">
+            <h1
               className={css({
-                pos: "absolute",
-                w: "sr.only",
-                h: "sr.only",
-                p: "sr.only",
-                m: "sr.only",
-                overflow: "hidden",
-                clip: "rect(0, 0, 0, 0)",
-                whiteSpace: "nowrap",
-                borderWidth: "0",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                gap: "5px",
+                fontSize: { base: "xl !important", sm: "2xl !important" },
+                fontWeight: "semibold",
+                color: "gray.900",
               })}
             >
-              Logo
-            </span>
-            {/* <Logo /> */}
-          </a>
-          <h1
-            className={css({
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-              gap: "5px",
-              fontSize: { base: "xl !important", sm: "2xl !important" },
-              fontWeight: "semibold",
-              color: "gray.900",
-            })}
-          >
-            Châles <img src="../../icon.png" className={css({ height: "40px" })} /> Tibétains
-          </h1>
+              Châles <img src="../../icon.png" className={css({ height: "40px" })} /> Tibétains
+            </h1>
+          </Link>
           <div className={css({ justifySelf: "end" })}>
             <CartIcon />
           </div>

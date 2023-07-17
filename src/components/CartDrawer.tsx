@@ -129,7 +129,7 @@ export const CartDrawer = () => {
                               className={gridItem({
                                 overflow: "hidden",
                                 rounded: "lg",
-                                gridColumn: { base: "2", lg: "3" },
+                                gridColumn: "2",
                               })}
                             >
                               {
@@ -145,7 +145,7 @@ export const CartDrawer = () => {
                             </div>
                             <div
                               className={gridItem({
-                                gridColumn: { base: "7", lg: "8" },
+                                gridColumn: "8",
                                 display: "flex",
                                 flexDir: "column",
                                 justifyContent: "space-between",
