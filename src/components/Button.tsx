@@ -18,6 +18,16 @@ export const Button = ({ children, onClick, type = "button" }: ButtonProps) => {
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
+        borderRadius: "8px",
+        border: "1px solid transparent",
+        padding: "0.6em 1.2em",
+        fontSize: "1em",
+        fontWeight: 500,
+        fontFamily: "inherit",
+        background: "linear-gradient(to bottom right, #064e3b, #059669)",
+        color: "white",
+        cursor: "pointer",
+        transition: "border-color 0.25s",
       })}
     >
       {children}

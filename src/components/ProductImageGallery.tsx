@@ -2,7 +2,7 @@ import { css } from "../../styled-system/css";
 import { grid, gridItem } from "../../styled-system/patterns";
 
 interface ProductImageGalleryProps {
-  images: string;
+  images: string[];
 }
 
 export const ProductImageGallery = ({ images }: ProductImageGalleryProps) => {
@@ -17,7 +17,7 @@ export const ProductImageGallery = ({ images }: ProductImageGalleryProps) => {
         <img
           className={css({ overflow: "hidden", rounded: "lg", h: "full", objectFit: "cover" })}
           loading="eager"
-          src={images}
+          src={images[0]}
           sizes={`
           (min-width: 1540px) 475px,
           (min-width: 1280px) 389px,
@@ -38,13 +38,13 @@ export const ProductImageGallery = ({ images }: ProductImageGalleryProps) => {
           flexDir: { base: "row", md: "column" },
         })}
       >
-        {new Array(3).fill(4).map((_, index) => {
+        {images.slice(1).map((image, index) => {
           if (index < 3) {
             return (
               <div className={css({ overflow: "hidden", rounded: "lg" })} key={index}>
                 <img
                   loading="eager"
-                  src={images}
+                  src={image}
                   sizes={`
                   (min-width: 1540px) 475px,
                   (min-width: 1280px) 389px,

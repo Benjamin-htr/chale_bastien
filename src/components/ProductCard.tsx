@@ -21,7 +21,7 @@ export const ProductCard = ({ product }: ProductCardProps) => {
       })}
     >
       <div className={css({ pos: "relative" })}>
-        <img loading="eager" src={product?.images} className={css({ w: "full", h: "full", objectFit: "cover" })} />
+        <img loading="eager" src={product?.images[0]} className={css({ w: "full", h: "full", objectFit: "cover" })} />
         <div
           className={css({
             pos: "absolute",

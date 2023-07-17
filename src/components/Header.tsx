@@ -1,4 +1,6 @@
 import { css } from "../../styled-system/css";
+import { grid } from "../../styled-system/patterns";
+import { CartIcon } from "./CartIcon";
 
 export const Header = () => {
   return (
@@ -14,12 +16,10 @@ export const Header = () => {
         })}
       >
         <nav
-          className={css({
-            w: "container",
-            maxW: "container",
-            display: "grid",
-            gridTemplateColumns: "cols.3",
+          className={grid({
+            gridTemplateColumns: "3",
             alignItems: "center",
+            paddingX: "1.5rem",
           })}
         >
           <a href="/">
@@ -53,7 +53,9 @@ export const Header = () => {
           >
             Châles <img src="../../icon.png" className={css({ height: "40px" })} /> Tibétains
           </h1>
-          <div className={css({ justifySelf: "end" })}>{/* <CartIcon client:load /> */}</div>
+          <div className={css({ justifySelf: "end" })}>
+            <CartIcon />
+          </div>
         </nav>
       </div>
     </header>
