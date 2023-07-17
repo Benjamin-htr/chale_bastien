@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom";
 import { css } from "../../styled-system/css";
-import { grid, gridItem } from "../../styled-system/patterns";
+import { gridItem } from "../../styled-system/patterns";
 import { Breadcrumb } from "../components/Breadcrumb";
 import { Button } from "../components/Button";
 import { ProductAccordion } from "../components/ProductAccordion";
@@ -8,18 +8,24 @@ import { ProductImageGallery } from "../components/ProductImageGallery";
 import { ProductInformations } from "../components/ProductInformations";
 import { ProductReview } from "../components/ProductReviews";
 import { products } from "../data/products";
+import { useAppStore } from "../utils/store";
 
 export const Product = () => {
   const { productId } = useParams();
+  const { addToCart, toggleCart } = useAppStore();
 
   if (!productId) throw new Error("No product id provided");
 
   const product = products.at(parseInt(productId) - 1);
-  console.log(product);
 
   if (product === undefined) {
     return <div>Product not found</div>;
   }
+
+  const onAddToCart = () => {
+    addToCart(product);
+    toggleCart();
+  };
 
   return (
     <>
@@ -29,10 +35,10 @@ export const Product = () => {
 
       <section className={css({ paddingX: "1.5rem" })}>
         <div
-          className={grid({
+          className={css({
             pb: "16",
             pt: "6",
-            display: { base: "block", lg: "grid" },
+            display: { base: "black", lg: "grid" },
             gridTemplateColumns: { base: "1fr", lg: "repeat(12,minmax(0,1fr))" },
             gap: { base: "8", lg: "20" },
           })}
@@ -45,7 +51,7 @@ export const Product = () => {
             <ProductInformations product={product} />
 
             <div className={css({ mt: "6" })}>
-              <Button>Ajouter au panier</Button>
+              <Button onClick={onAddToCart}>Ajouter au panier</Button>
             </div>
 
             <div className={css({ mt: "8" })}>

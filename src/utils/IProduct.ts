@@ -5,6 +5,7 @@ export interface IProduct {
   description: string;
   images: string[];
   reviews?: IReview[];
+  quantity?: number;
 }
 
 export interface IReview {
