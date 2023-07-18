@@ -4,7 +4,15 @@ export const Team = () => {
   return (
     <div className={css({ paddingX: "1.5rem", marginY: "10px" })}>
       <h1>À propos de nous</h1>
-      <div className={css({ display: "flex", alignItems: "start", gap: "20px", mt: "20px" })}>
+      <div
+        className={css({
+          display: "flex",
+          alignItems: "start",
+          gap: "20px",
+          mt: "20px",
+          flexWrap: { base: "wrap", sm: "unset" },
+        })}
+      >
         <img src="../../team.jpg" />
         <div>
           <p>
